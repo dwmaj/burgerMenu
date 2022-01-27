@@ -22,10 +22,10 @@ Dans notre exemple, nous allons mettre en place une version simple en utilisant 
         <li class="menu__el"><a href="#">Mon expérience</a></li>
         <li class="menu__el"><a href="#">Ressources</a></li>
         <li class="menu__el"><a href="#">Case study</a></li>
-    </ul>![image](https://user-images.githubusercontent.com/2959650/151407453-1a675978-3438-49eb-bd95-3b6f7ae83a91.jpeg)
+    </ul>
 
 
-    <button class="btn>Day/Night</button>
+    <button class="btn">Day/Night</button>
 </nav>
 <button class="btn menu__btn">Menu</button>
 ```
@@ -89,7 +89,7 @@ Le toggle va automatiquement ajouter la classe `menu--open` lorsqu'elle n'est pa
 
 Si on veut, on peut également personnaliser le texte du bouton. D'après les études, un burgerMenu qui affiche le texte «MENU» est plus accessible.
 
-```
+```JAVASCRIPT
 if(menuBtn.innerHTML === "Menu"){
   menuBtn.innerHTML = "Fermer";
 }else{
