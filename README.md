@@ -115,10 +115,13 @@ Pour ce faire, nous allons commencer par placer notre `<nav class="menu">` en `p
         left: 0;
         top: 0;
         background-color: #fff;
+        z-index: 10;
     }
     
 }
 ```
+Encore une fois, on utilise le `z-index` pour placer le menu au dessus du contenu du site. Une valeur `10` pour le menu et une valeur `20` pour le bouton de manière à garder le bouton au dessus du menu.
+
 Ensuite, il faut le placer en mode **fermé**. Dans notre cas, tout à droite de l'écran. Une transformation de type `translateX(100%)` va nous permettre de placer automatiquement notre menu à 100% de sa largeur (donc toute la largeur de l'écran) sur la droite. On pourrait appliquer la même chose avec un `translateY` pour la hauteur par exemple.
 
 ```CSS
@@ -178,6 +181,24 @@ Voici le CSS complet:
 }
 ```
 
+## Menu responsive
+
+Pour une application mobile, un seul menu sans responsive peut être suffisant. Dans le contexte d'un projet responsive, il faut pouvoir adapter le menu, ici un burgerMenu.
+
+Nous avons déjà utilisé un max-width pour notre @media, ce qui restreint notre style de menu à une taille de smartphone. Il nous reste juste à cacher notre bouton d'ouverture/fermeture du menu:
+
+```CSS
+@media (min-width: 700px){
+
+    .menu__btn{
+        display: none;
+    }
+
+}
+```
+
+Il ne nous reste plus qu'a ajouter le style du menu :grin:.
+
 ## Documentations
 
 Sur cette image, on peut découvrir la première utilisation de cet icône:
@@ -186,5 +207,5 @@ Sur cette image, on peut découvrir la première utilisation de cet icône:
 
 Voici d'autres liens qui peuvent être utiles:
 
-- [The Ultimate Guide to the Brilliance — and Potential Dangers — of the Hamburger Icon](https://vtldesign.com/web-strategy/website-design-development/hamburger-icon-flyout-menu-website-navigation/)
-- [Hamburger menu alternatives for mobile navigation](https://medium.com/@kollinz/hamburger-menu-alternatives-for-mobile-navigation-a3a3beb555b8)
+- [The Ultimate Guide to the Brilliance — and Potential Dangers — of the Hamburger Icon](https://vtldesign.com/web-strategy/website-design-development/hamburger-icon-flyout-menu-website-navigation/);
+- [Hamburger menu alternatives for mobile navigation](https://medium.com/@kollinz/hamburger-menu-alternatives-for-mobile-navigation-a3a3beb555b8).
